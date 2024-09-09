@@ -69,3 +69,43 @@ for i in b:
 print()
 x = tuple(a)
 print(a)
+
+
+# SET
+
+a = {1, 3, 5, 8, 3, 7}
+b = {0, False, 1, 5}
+
+# len - type
+print(len(a), type(a))
+
+# add - remove
+a.add(10)
+a.remove(8)
+print(a)
+
+# union - intersection - difference
+c = a | b
+print("union:", c)
+
+c = a & b
+print("intersection:", c)
+
+c = a - b
+print("difference:", c)
+
+# loop
+for i in a:
+    if i == 5:
+        break
+    else:
+        print(i, end = " ")
+print()
+
+# join [2, 3, 4]
+x = [2, 3, 4]
+x = set(x)
+a = a.union(x)
+print(a)
+
+
