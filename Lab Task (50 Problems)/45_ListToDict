@@ -1,0 +1,9 @@
+demon_slayers = ["tanjiro", "inosuke", "zenitsu"]  
+  
+# Initialize an empty dictionary  
+demon_slayers_dict = {}  
+  
+for idx, slayers in enumerate(demon_slayers):  
+    demon_slayers_dict[idx] = slayers
+  
+print(demon_slayers_dict) 
