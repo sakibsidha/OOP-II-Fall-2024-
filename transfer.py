@@ -1,5 +1,6 @@
 class Person:
     def __init__(self, fname, lname):
+        print("Person constructor")
         self.fname = fname
         self.lname = lname
 
@@ -9,6 +10,7 @@ class Person:
 
 class Student(Person):
     def __init__(self, fname, lname, graduation_year):
+        print("Student constructor")
         super().__init__(fname, lname)
         self.graduation_year = graduation_year
 
@@ -18,7 +20,8 @@ class Student(Person):
 
 class Teacher(Person):
     def __init__(self, fname, lname, joining_year):
-        super().__init__(fname, lname)
+        print("Teacher constructor")
+        Person.__init__(self, fname, lname)
         self.joining_year = joining_year
 
     def display(self):
@@ -27,7 +30,8 @@ class Teacher(Person):
 
 class Admin(Person):
     def __init__(self, fname, lname, joining_year):
-        super().__init__(fname, lname)
+        print("Admin constructor")
+        Person.__init__(self, fname, lname)
         self.joining_year = joining_year
 
     def display(self):
@@ -36,6 +40,7 @@ class Admin(Person):
 
 class CurrentStudent(Student):
     def __init__(self, fname, lname):
+        print("CurrentStudent constructor")
         super().__init__(fname, lname, 2026)
         self.currentSemester = 5
     
@@ -45,14 +50,35 @@ class CurrentStudent(Student):
 
 class Alumni(Student):
     def __init__(self, fname, lname):
+        print("Alumni constructor")
         super().__init__(fname, lname, 6746)
         self.passingYear = 1999
     
     def display(self):
         super().display()
         print("Passing Year:", self.passingYear)
+        
+class Employee(Teacher, Admin):
+    def __init__(self, fname, lname, jyear, age):
+        print("Employee constructor")
+        Teacher.__init__(self, fname, lname, jyear)
+        Admin.__init__(self, fname, lname, jyear)
+        self.age = age
 
-ob = Student("Tanjiro", "Kamado", 2026)
-ob.display()
-ob2 = Person("Nezuko", "Chan")
-ob2.display()
+    def display(self):
+        print(self.age)
+
+student = Student("Tanjiro", "Kamado", 2026)
+student.display()
+person = Person("Nezuko", "Chan")
+person.display()
+teacher = Teacher("Raisa", "Hauqqqqqqe", 2026)
+teacher.display()
+admin = Admin("Akhter", "Ali", 2022)
+admin.display()
+current_student = CurrentStudent("Rakibul", "Islam")
+current_student.display()
+alumni = Alumni("Sajib", "Hossain")
+alumni.display()
+employee = Employee("akij", "biri", 6766, 45)
+employee.display()
