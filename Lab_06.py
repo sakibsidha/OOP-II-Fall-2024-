@@ -24,7 +24,7 @@ class Teacher(Person):
         Person.__init__(self, fname, lname)
         self.joining_year = joining_year
 
-    def display(self):
+    def displayTeacher(self):
         super().display()
         print("Joining Year:", self.joining_year)
 
@@ -34,7 +34,7 @@ class Admin(Person):
         Person.__init__(self, fname, lname)
         self.joining_year = joining_year
 
-    def display(self):
+    def displayAdmin(self):
         super().display()
         print("Joining Year:", self.joining_year)
 
@@ -66,6 +66,8 @@ class Employee(Teacher, Admin):
         self.age = age
 
     def display(self):
+        super().displayAdmin()
+        super().displayTeacher()
         print(self.age)
 
 student = Student("Tanjiro", "Kamado", 2026)
@@ -73,12 +75,12 @@ student.display()
 person = Person("Nezuko", "Chan")
 person.display()
 teacher = Teacher("Raisa", "Hauqqqqqqe", 2026)
-teacher.display()
+teacher.displayTeacher()
 admin = Admin("Akhter", "Ali", 2022)
-admin.display()
+admin.displayAdmin()
 current_student = CurrentStudent("Rakibul", "Islam")
 current_student.display()
 alumni = Alumni("Sajib", "Hossain")
 alumni.display()
-employee = Employee("akij", "biri", 6766, 45)
+employee = Employee("Akij", "Bhai", 6766, 45)
 employee.display()
