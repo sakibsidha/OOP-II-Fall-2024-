@@ -15,7 +15,7 @@ class InvalidAmountException(Exception):
 class AccountHolder(BankAccount):
     def __init__(self, name, balance, acc_num):
         self._balance = balance
-        self.__name = name
+        self.name = name
         self.__acc_num = acc_num
     
     def deposit(self, amount):
@@ -36,7 +36,7 @@ class AccountHolder(BankAccount):
         self._balance = balance
 
     def setName(self, name):
-        self.__name = name
+        self.name = name
 
     def setAccountNum(self, acc_num):
         self.__acc_num =  acc_num
@@ -45,14 +45,14 @@ class AccountHolder(BankAccount):
         return self._balance
 
     def getName(self):
-        return  self.__name
+        return  self.name
 
-    def setAccountNum(self):
+    def getAccountNum(self):
         return self.__acc_num
     
 a = AccountHolder("Raisa Haque", 100.0, 1234)
 try:
-    a.deposit(-1)
+    a.deposit(1)
     a.withdraw(103)
 except ValueError:
     print("Value Error Occured!")
@@ -62,5 +62,3 @@ except:
     print("Other errors occured!")
 finally:
     print("Done.")
-
-print(a.getName())
