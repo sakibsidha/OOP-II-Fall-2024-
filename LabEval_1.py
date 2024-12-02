@@ -15,14 +15,14 @@ class InvalidAmountException(Exception):
 class AccountHolder(BankAccount):
     def __init__(self, name, balance, acc_num):
         self._balance = balance
-        self.name = name
+        self.__name = name
         self.__acc_num = acc_num
     
     def deposit(self, amount):
         if (amount < 0):
             raise InvalidAmountException
         self._balance += amount
-        print("Deposit successful! New balance:", self._balance)
+        print("The Deposit u made is successful! New balance:", self._balance)
     
     def withdraw(self, amount):
         if (amount < 0):
@@ -30,13 +30,13 @@ class AccountHolder(BankAccount):
         if (amount > self._balance):
             raise ValueError
         self._balance -= amount
-        print("Withdraw successful! New balance:", self._balance)
+        print("The Withdraw u made is successful! New balance:", self._balance)
 
     def setBalance(self, balance):
         self._balance = balance
 
     def setName(self, name):
-        self.name = name
+        self.__name = name
 
     def setAccountNum(self, acc_num):
         self.__acc_num =  acc_num
@@ -45,20 +45,31 @@ class AccountHolder(BankAccount):
         return self._balance
 
     def getName(self):
-        return  self.name
+        return  self.__name
 
-    def getAccountNum(self):
+    def setAccountNum(self):
         return self.__acc_num
-    
-a = AccountHolder("Raisa Haque", 100.0, 1234)
+
+objects = []
+for i in range(0, 5):
+    name = input()
+    balance = float(input())
+    acc_num = int(input())
+    a = AccountHolder(name, balance, acc_num)
+    objects.append(a)
+
+print(objects[2].getName())
+a = objects[0]
+
 try:
-    a.deposit(1)
-    a.withdraw(103)
+    a.deposit(18)
+    a.withdraw(200)
 except ValueError:
-    print("Value Error Occured!")
+    print("There is a value error occured!")
 except InvalidAmountException:
-    print("Invalid Amount Exception Occured.")
+    print("There is an invalid amount exception occured.")
 except:
-    print("Other errors occured!")
+    print("There are other error!")
 finally:
-    print("Done.")
+    print("congratulations!")
+
