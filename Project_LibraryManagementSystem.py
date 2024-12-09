@@ -1,3 +1,20 @@
+"""
+
+Final Lab Project for OOP II
+
+Library Management Sytem (v.01)
+
+By, 
+    Kh Sadman Sakib (63_M2, 0242220005101951)
+    Ramesha Rawnok Haque (63_M2, 0242220005101665)
+
+Submitted to,
+    Nasima Islam Bithi
+    Lecturer
+    Daffodil International University
+
+"""
+
 from datetime import datetime, timedelta
 from abc import ABC, abstractclassmethod
 
