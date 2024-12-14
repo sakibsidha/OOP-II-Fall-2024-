@@ -1,5 +1,4 @@
 # Lab Task 50 Problems
----
 
 **Submitted by**
 
