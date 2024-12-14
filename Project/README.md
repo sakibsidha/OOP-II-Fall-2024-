@@ -21,7 +21,7 @@ Daffodil International University
 
 ---
 
-The project is meant to run on terminal. You can use any IDE with a integrated or terminal or other shell that can run a Pyhton script to view the project.
+The project is meant to run on terminal. You can use any IDE with an integrated terminal or other shell that can run a Pyhton script to view the project.
 
 Thank you!
 
