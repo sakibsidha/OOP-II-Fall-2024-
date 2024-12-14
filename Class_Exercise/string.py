@@ -2,17 +2,21 @@ a = "hello"
 b = "b2b2b2 "
 c = " 3g3g "
 
+
 # 1
 d = a + b + c
 print("d:", d)
+
 
 # 2
 print("Length of d:", len(d))
 print("Reversed d:", d[::-1])
 
+
 # 3
 is_a2_present = "a2" in d
 print("Is 'a2' present in d?:", is_a2_present)
+
 
 # 4
 print("Uppercase:", d.upper())
