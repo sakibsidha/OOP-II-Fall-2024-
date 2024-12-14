@@ -3,7 +3,7 @@
 
 **Submitted by**
 
-Name: Kh Sadman Sakib </br>
+Kh Sadman Sakib </br>
 ID: 0242220005101951 </br>
 Section: 63_M2 </br>
 Department of CSE</br>
