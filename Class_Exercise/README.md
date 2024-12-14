@@ -1,3 +1,6 @@
+# Class Exercise
+
+
 **Submitted by**
 
 Name: Kh Sadman Sakib </br>
@@ -16,4 +19,4 @@ Department of CSE</br>
 Daffodil International University
 
 ---
-Problem List: [https://classroom.google.com/c/Njk4Mzc1MTU1NTI3/p/NzM2MDc5MDMzNTg4](url)
+Problem List: [Google Classroom Link](https://classroom.google.com/c/Njk4Mzc1MTU1NTI3/p/NzM2MDc5MDMzNTg4)
